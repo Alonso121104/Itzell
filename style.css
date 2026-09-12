@@ -1,6 +1,6 @@
-/* ==============================
-   PAGE
-   ============================== */
+/* =========================
+   RESET
+   ========================= */
 
 * {
     box-sizing: border-box;
@@ -13,10 +13,16 @@ body {
     min-height: 100%;
 }
 
+
+/* =========================
+   BODY
+   ========================= */
+
 body {
     min-height: 100vh;
 
     background-image: url("halloween.png");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,9 +34,9 @@ body {
 }
 
 
-/* ==============================
+/* =========================
    MUSIC PLAYER
-   ============================== */
+   ========================= */
 
 .music-player {
     display: flex;
@@ -45,12 +51,14 @@ audio {
 }
 
 
-/* ==============================
+/* =========================
    MESSAGE
-   ============================== */
+   ========================= */
 
 .message {
     margin: 15px auto 0;
+
+    padding: 0 15px;
 
     text-align: center;
 
@@ -62,34 +70,35 @@ audio {
     text-shadow:
         2px 2px 4px black,
         0 0 8px black;
-
-    padding: 0 15px;
 }
 
 
-/* ==============================
+/* =========================
    IMAGE GALLERY
-   ============================== */
+   ========================= */
 
 .container {
     width: min(90%, 1100px);
+
     height: 450px;
 
     margin: 70px auto 40px;
 
     display: flex;
 
-    gap: 10px;
-
     justify-content: center;
     align-items: stretch;
+
+    gap: 10px;
 }
 
 
-/* Individual images */
+/* =========================
+   IMAGES
+   ========================= */
 
 .container img {
-    width: 16.666%;
+    width: 20%;
 
     height: 100%;
 
@@ -102,19 +111,21 @@ audio {
     box-shadow:
         0 5px 15px rgba(0, 0, 0, 0.6);
 
+    cursor: pointer;
+
     transition:
         width 0.5s ease-in-out,
         transform 0.5s ease-in-out,
         box-shadow 0.5s ease-in-out;
-
-    cursor: pointer;
 }
 
 
-/* Hover effect */
+/* =========================
+   HOVER EFFECT
+   ========================= */
 
 .container img:hover {
-    width: 30%;
+    width: 35%;
 
     transform: scale(1.02);
 
@@ -123,9 +134,9 @@ audio {
 }
 
 
-/* ==============================
+/* =========================
    TABLET
-   ============================== */
+   ========================= */
 
 @media (max-width: 768px) {
 
@@ -135,6 +146,7 @@ audio {
 
     .container {
         width: 92%;
+
         height: 380px;
 
         margin-top: 50px;
@@ -145,13 +157,12 @@ audio {
     .container img {
         border-width: 3px;
     }
-
 }
 
 
-/* ==============================
+/* =========================
    PHONE
-   ============================== */
+   ========================= */
 
 @media (max-width: 600px) {
 
@@ -186,7 +197,7 @@ audio {
     }
 
     .container img {
-        width: 16.666%;
+        width: 20%;
 
         border-radius: 7px;
 
@@ -194,14 +205,14 @@ audio {
     }
 
     .container img:hover {
-        width: 30%;
+        width: 35%;
     }
 }
 
 
-/* ==============================
+/* =========================
    SMALL PHONES
-   ============================== */
+   ========================= */
 
 @media (max-width: 400px) {
 
@@ -217,6 +228,7 @@ audio {
 
     .container img {
         border-width: 2px;
+
         border-radius: 6px;
     }
 }
