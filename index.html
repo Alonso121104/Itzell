@@ -18,16 +18,12 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- HERO -->
     <header class="hero">
 
-        <div class="pumpkin">
-            🎃
-        </div>
+        <div class="pumpkin">🎃</div>
 
-        <h1>
-            Halloween Night
-        </h1>
+        <h1>Halloween Night</h1>
 
         <p>
             Can't wait to spend Halloween with you Bae ❤️
@@ -36,44 +32,22 @@
     </header>
 
 
-    <!-- MUSIC -->
-    <section class="music-player">
-
-        <p class="music-title">
-            🎵 Halloween Music
-        </p>
-
-        <audio controls loop>
-
-            <source
-                src="Michael Myers Theme Song.mp3"
-                type="audio/mpeg"
-            >
-
-            Your browser does not support the audio element.
-
-        </audio>
-
-    </section>
-
-
-    <!-- MOVIE MESSAGE -->
+    <!-- MOVIE SECTION -->
     <section class="movie-section">
 
-        <h2>
-            🎬 Pick Our Movie
-        </h2>
+        <h2>🎬 Pick Our Movie</h2>
 
         <p>
-            Click a picture to watch Netflix ❤️
+            Click any picture to open Netflix ❤️
         </p>
 
     </section>
 
 
-    <!-- IMAGE GALLERY -->
-    <div class="container">
+    <!-- MOVIE CARDS -->
+    <main class="container">
 
+        <!-- HELLO KITTY -->
         <a
             href="https://www.netflix.com/"
             target="_blank"
@@ -86,13 +60,15 @@
                 alt="Hello Kitty Halloween"
             >
 
-            <span>
-                Hello Kitty 🎀
-            </span>
+            <div class="card-overlay">
+                <span>Hello Kitty 🎀</span>
+                <small>Click to watch</small>
+            </div>
 
         </a>
 
 
+        <!-- SCREAM -->
         <a
             href="https://www.netflix.com/"
             target="_blank"
@@ -102,16 +78,18 @@
 
             <img
                 src="Scream-PNG-Pic.png"
-                alt="Ghostface"
+                alt="Scream"
             >
 
-            <span>
-                Scream 🔪
-            </span>
+            <div class="card-overlay">
+                <span>Scream 🔪</span>
+                <small>Click to watch</small>
+            </div>
 
         </a>
 
 
+        <!-- CHUCKY -->
         <a
             href="https://www.netflix.com/"
             target="_blank"
@@ -124,13 +102,15 @@
                 alt="Chucky"
             >
 
-            <span>
-                Chucky 🧸
-            </span>
+            <div class="card-overlay">
+                <span>Chucky 🧸</span>
+                <small>Click to watch</small>
+            </div>
 
         </a>
 
 
+        <!-- JASON -->
         <a
             href="https://www.netflix.com/"
             target="_blank"
@@ -143,13 +123,15 @@
                 alt="Jason Voorhees"
             >
 
-            <span>
-                Jason 🔪
-            </span>
+            <div class="card-overlay">
+                <span>Jason 🔪</span>
+                <small>Click to watch</small>
+            </div>
 
         </a>
 
 
+        <!-- HALLOWEEN -->
         <a
             href="https://www.netflix.com/"
             target="_blank"
@@ -162,17 +144,18 @@
                 alt="Halloween"
             >
 
-            <span>
-                Halloween 🎃
-            </span>
+            <div class="card-overlay">
+                <span>Halloween 🎃</span>
+                <small>Click to watch</small>
+            </div>
 
         </a>
 
-    </div>
+    </main>
 
 
     <!-- NETFLIX BUTTON -->
-    <div class="netflix-section">
+    <section class="netflix-section">
 
         <a
             href="https://www.netflix.com/"
@@ -183,7 +166,7 @@
             🎬 Open Netflix
         </a>
 
-    </div>
+    </section>
 
 
     <!-- FOOTER -->
