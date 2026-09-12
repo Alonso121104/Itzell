@@ -22,7 +22,6 @@ body {
     min-height: 100vh;
 
     background-image: url("halloween.png");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,7 +98,6 @@ audio {
 
 .container img {
     width: 20%;
-
     height: 100%;
 
     object-fit: cover;
@@ -146,7 +144,6 @@ audio {
 
     .container {
         width: 92%;
-
         height: 380px;
 
         margin-top: 50px;
@@ -182,13 +179,11 @@ audio {
         margin-top: 18px;
 
         font-size: 17px;
-
         line-height: 1.4;
     }
 
     .container {
         width: 94%;
-
         height: 350px;
 
         margin: 45px auto 30px;
@@ -200,7 +195,6 @@ audio {
         width: 20%;
 
         border-radius: 7px;
-
         border-width: 2px;
     }
 
@@ -222,13 +216,11 @@ audio {
 
     .container {
         height: 300px;
-
         gap: 4px;
     }
 
     .container img {
         border-width: 2px;
-
         border-radius: 6px;
     }
 }
