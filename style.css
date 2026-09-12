@@ -1,6 +1,6 @@
 /* =========================
    RESET
-   ========================= */
+========================= */
 
 * {
     box-sizing: border-box;
@@ -10,265 +10,524 @@ html,
 body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
 }
 
 
 /* =========================
    BODY
-   ========================= */
+========================= */
 
 body {
+
     min-height: 100vh;
 
-    background: #000000;
+    background:
+        radial-gradient(
+            circle at top,
+            #241000 0%,
+            #090909 45%,
+            #000000 100%
+        );
 
-    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     overflow-x: hidden;
+
 }
 
 
 /* =========================
-   MUSIC PLAYER
-   ========================= */
+   HERO
+========================= */
+
+.hero {
+
+    text-align: center;
+
+    padding:
+        45px
+        20px
+        25px;
+
+}
+
+
+.pumpkin {
+
+    font-size: 55px;
+
+    margin-bottom: 5px;
+
+    animation:
+        float 3s ease-in-out infinite;
+
+}
+
+
+.hero h1 {
+
+    margin: 0;
+
+    font-size: 42px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px rgba(255, 115, 0, 0.8),
+        0 0 25px rgba(255, 70, 0, 0.5);
+
+}
+
+
+.hero p {
+
+    margin-top: 12px;
+
+    font-size: 21px;
+
+    color: #f5f5f5;
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
 
 .music-player {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    padding-top: 20px;
+    width: min(90%, 500px);
+
+    margin:
+        10px
+        auto
+        30px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
 }
 
+
+.music-title {
+
+    margin:
+        0
+        0
+        12px;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+}
+
+
 audio {
-    width: min(90%, 400px);
+
+    width: 100%;
+
 }
 
 
 /* =========================
-   MESSAGE
-   ========================= */
+   MOVIE SECTION
+========================= */
 
-.message {
-    margin: 15px auto 0;
+.movie-section {
 
-    padding: 0 15px;
+    text-align: center;
+
+    margin:
+        20px
+        auto
+        25px;
+
+}
+
+
+.movie-section h2 {
+
+    margin-bottom: 8px;
+
+    font-size: 28px;
+
+}
+
+
+.movie-section p {
+
+    margin: 0;
+
+    color: #bbbbbb;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.container {
+
+    width:
+        min(94%, 1150px);
+
+    margin:
+        0
+        auto
+        35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+}
+
+
+/* =========================
+   MOVIE CARDS
+========================= */
+
+.movie-card {
+
+    position: relative;
+
+    height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.15);
+
+    background: #111;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.7);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.movie-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.movie-card span {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 25px 10px 15px;
 
     text-align: center;
 
     color: white;
 
-    font-size: 22px;
+    font-size: 18px;
+
     font-weight: bold;
 
-    text-shadow:
-        2px 2px 4px black,
-        0 0 8px black;
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.95)
+        );
+
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.movie-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color:
+        rgba(255, 90, 0, 0.8);
+
+    box-shadow:
+        0 15px 40px
+        rgba(255, 70, 0, 0.3);
+
+}
+
+
+.movie-card:hover img {
+
+    transform: scale(1.08);
+
+    filter:
+        brightness(0.75);
+
 }
 
 
 /* =========================
    NETFLIX BUTTON
-   ========================= */
+========================= */
 
-.netflix-link {
-    display: block;
+.netflix-section {
 
-    width: fit-content;
+    text-align: center;
 
-    margin: 25px auto 0;
+    margin:
+        25px
+        auto
+        50px;
 
-    padding: 12px 28px;
+}
 
-    background: #e50914;
+
+.netflix-button {
+
+    display: inline-block;
+
+    padding:
+        14px
+        32px;
+
+    background:
+        #e50914;
 
     color: white;
 
     text-decoration: none;
 
     font-size: 18px;
+
     font-weight: bold;
 
-    border-radius: 6px;
+    border-radius: 8px;
 
     box-shadow:
-        0 5px 15px rgba(229, 9, 20, 0.4);
+        0 8px 25px
+        rgba(229, 9, 20, 0.35);
 
     transition:
         transform 0.2s ease,
         background 0.2s ease,
         box-shadow 0.2s ease;
+
 }
 
-.netflix-link:hover {
-    background: #b20710;
 
-    transform: scale(1.05);
+.netflix-button:hover {
+
+    background:
+        #b20710;
+
+    transform:
+        scale(1.06);
 
     box-shadow:
-        0 8px 20px rgba(229, 9, 20, 0.6);
+        0 10px 35px
+        rgba(229, 9, 20, 0.55);
+
 }
 
 
 /* =========================
-   IMAGE GALLERY
-   ========================= */
+   FOOTER
+========================= */
 
-.container {
-    width: min(90%, 1100px);
+footer {
 
-    height: 450px;
+    text-align: center;
 
-    margin: 50px auto 40px;
+    padding:
+        20px;
 
-    display: flex;
+    color:
+        #777;
 
-    justify-content: center;
-    align-items: stretch;
+    font-size:
+        14px;
 
-    gap: 10px;
 }
 
 
 /* =========================
-   IMAGES
-   ========================= */
+   ANIMATION
+========================= */
 
-.container img {
-    width: 20%;
-    height: 100%;
+@keyframes float {
 
-    object-fit: cover;
+    0%,
+    100% {
 
-    border-radius: 10px;
+        transform:
+            translateY(0);
 
-    border: 4px solid rgba(255, 255, 255, 0.5);
+    }
 
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.6);
+    50% {
 
-    cursor: pointer;
+        transform:
+            translateY(-8px);
 
-    transition:
-        width 0.5s ease-in-out,
-        transform 0.5s ease-in-out,
-        box-shadow 0.5s ease-in-out;
-}
+    }
 
-
-/* =========================
-   HOVER EFFECT
-   ========================= */
-
-.container img:hover {
-    width: 35%;
-
-    transform: scale(1.02);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.8);
 }
 
 
 /* =========================
    TABLET
-   ========================= */
+========================= */
 
-@media (max-width: 768px) {
-
-    .message {
-        font-size: 19px;
-    }
+@media (max-width: 900px) {
 
     .container {
-        width: 92%;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+    .movie-card {
+
         height: 380px;
 
-        margin-top: 40px;
-
-        gap: 7px;
     }
 
-    .container img {
-        border-width: 3px;
-    }
 }
 
 
 /* =========================
    PHONE
-   ========================= */
+========================= */
 
 @media (max-width: 600px) {
 
-    .music-player {
-        padding-top: 15px;
+    .hero {
+
+        padding-top: 30px;
+
     }
 
-    audio {
-        width: 90%;
+    .hero h1 {
+
+        font-size: 30px;
+
     }
 
-    .message {
-        margin-top: 18px;
+    .hero p {
 
         font-size: 17px;
-        line-height: 1.4;
+
     }
 
-    .netflix-link {
-        margin-top: 20px;
+    .pumpkin {
 
-        padding: 10px 24px;
+        font-size: 45px;
 
-        font-size: 16px;
     }
 
     .container {
-        width: 94%;
-        height: 350px;
 
-        margin: 40px auto 30px;
+        grid-template-columns:
+            repeat(2, 1fr);
 
-        gap: 5px;
+        gap: 10px;
+
     }
 
-    .container img {
-        width: 20%;
+    .movie-card {
 
-        border-radius: 7px;
-        border-width: 2px;
+        height: 300px;
+
     }
 
-    .container img:hover {
-        width: 35%;
+    .movie-card span {
+
+        font-size: 15px;
+
     }
+
 }
 
 
 /* =========================
-   SMALL PHONES
-   ========================= */
+   SMALL PHONE
+========================= */
 
 @media (max-width: 400px) {
 
-    .message {
-        font-size: 15px;
-    }
-
-    .netflix-link {
-        font-size: 15px;
-        padding: 9px 20px;
-    }
-
     .container {
-        height: 300px;
-        gap: 4px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
-    .container img {
-        border-width: 2px;
-        border-radius: 6px;
+    .movie-card {
+
+        height: 260px;
+
     }
+
+    .hero h1 {
+
+        font-size: 26px;
+
+    }
+
 }
